@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>بطولة المولد النبوي الشريف – بعدان</title>
+  <meta name="description" content="موقع بطولة المولد النبوي الشريف – مديرية بعدان: القرى المشاركة، جدول المباريات، النتائج، والإحصائيات." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- ضع شعارك باسم logo.png بجانب الملفات -->
+        <img src="logo.png" alt="شعار المولد النبوي" class="brand-logo">
+        <div class="brand-text">
+          <h1>بطولة المولد النبوي الشريف</h1>
+          <p class="subtitle">مديرية بعدان – قرية الرباعي والقرى المجاورة</p>
+          <p class="sponsor">برعاية الشيخ <strong>عبد الحكيم الحبيشي</strong></p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#overview">الصفحة الرئيسية</a>
+        <a href="#villages">القرى المشاركة</a>
+        <a href="#schedule">المباريات</a>
+        <a href="#results">النتائج</a>
+        <a href="#stats">الإحصائيات</a>
+      </nav>
+    </div>
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,48 C240,120 480,0 720,48 C960,96 1200,24 1440,72 L1440,120 L0,120 Z"></path>
+      </svg>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="overview" class="section hero">
+      <h2>أهلاً بك في <span class="gold">كأس بعدان</span> 🎉</h2>
+      <p>هنا تجد كل أحداث البطولة من البداية إلى النهائي: القرى المشاركة، جدول المباريات، النتائج أولًا بأول، وإحصائيات تفصيلية — موقع ثابت وخفيف وسهل التحديث.</p>
+    </section>
+
+    <section id="villages" class="section">
+      <h3>القرى المشاركة</h3>
+      <div id="villages-grid" class="grid"></div>
+    </section>
+
+    <section id="schedule" class="section">
+      <h3>جدول المباريات</h3>
+      <div class="filters">
+        <label>المرحلة:
+          <select id="stage-filter">
+            <option value="">الكل</option>
+          </select>
+        </label>
+      </div>
+      <div class="table-wrap">
+        <table class="table" id="schedule-table">
+          <thead>
+            <tr>
+              <th>التاريخ</th><th>الوقت</th><th>المرحلة</th><th>الملعب</th><th>الفريق A</th><th>الفريق B</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <h3>النتائج</h3>
+      <div class="table-wrap">
+        <table class="table" id="results-table">
+          <thead>
+            <tr>
+              <th>التاريخ</th><th>المرحلة</th><th>الفريق A</th><th>النتيجة</th><th>الفريق B</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="note">لتحديث نتيجة مباراة: عدّل النتيجة في <code>data.js</code> فقط.</p>
+    </section>
+
+    <section id="stats" class="section">
+      <h3>الإحصائيات</h3>
+      <div class="table-wrap">
+        <table class="table" id="stats-table">
+          <thead>
+            <tr>
+              <th>الفريق</th><th>لعب</th><th>فوز</th><th>تعادل</th><th>خسارة</th><th>له</th><th>عليه</th><th>الفرق</th><th>نقاط</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="divider top" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,72 C240,24 480,96 720,48 C960,0 1200,120 1440,48 L1440,0 L0,0 Z"></path>
+      </svg>
+    </div>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> بطولة المولد النبوي الشريف – بعدان</p>
+      <p class="sponsor">برعاية الشيخ عبد الحكيم الحبيشي</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

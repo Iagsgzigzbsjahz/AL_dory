@@ -1,0 +1,66 @@
+
+
+:root{
+  --green-700:#0F6F45;   /* من الشعار */
+  --green-500:#1FA36B;
+  --gold:#D4AF37;
+  --white:#fff;
+  --ink:#0e1a17;
+  --fade:rgba(255,255,255,.14);
+  --shadow:0 10px 30px rgba(0,0,0,.18);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:'Cairo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--white); background:var(--green-700); line-height:1.7; overflow-x:hidden;
+}
+/* خلفية */
+.bg{position:fixed; inset:0; z-index:-2;
+  background:
+    radial-gradient(1100px 600px at 80% -20%, rgba(255,255,255,.12), transparent 60%),
+    linear-gradient(165deg, var(--green-700), var(--green-500));
+}
+.container{width:min(1100px, 92%); margin-inline:auto}
+.section{padding:34px 0}
+h1,h2,h3{margin:0 0 10px}
+.gold{color:var(--gold)}
+/* هيدر */
+.site-header{position:relative; padding:18px 0 0}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:18px}
+.brand{display:flex; align-items:center; gap:14px}
+.brand-logo{width:86px; height:auto; filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
+.brand-text h1{font-weight:800; font-size:clamp(20px,4vw,34px)}
+.subtitle{opacity:.9}
+.sponsor{color:var(--gold); font-weight:700}
+.nav a{
+  color:var(--white); text-decoration:none; margin-inline:8px; padding:8px 10px;
+  border:1px solid transparent; border-radius:8px;
+}
+.nav a:hover{border-color:var(--fade); background:rgba(255,255,255,.06)}
+.divider svg{display:block; width:100%; height:80px}
+.divider path{fill:rgba(255,255,255,.12)}
+/* بطاقات/جداول */
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+.card{
+  background:linear-gradient(to bottom right, rgba(255,255,255,.10), rgba(255,255,255,.06));
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+  border-radius:16px; padding:14px; box-shadow:var(--shadow);
+}
+.table-wrap{overflow:auto; background:rgba(255,255,255,.04); border-radius:12px; border:1px solid var(--fade)}
+.table{width:100%; border-collapse:collapse; min-width:720px}
+.table th,.table td{padding:10px 12px; border-bottom:1px solid var(--fade)}
+.table thead th{background:rgba(255,255,255,.08); text-align:right}
+.table tbody tr:hover{background:rgba(255,255,255,.06)}
+.note{opacity:.9}
+/* هيرو */
+.hero{text-align:center}
+.hero p{max-width:850px; margin-inline:auto}
+/* فوتر */
+.site-footer{margin-top:40px; background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04))}
+.site-footer .divider.top path{fill:rgba(255,255,255,.10)}
+.footer-inner{padding:18px 0 30px; text-align:center}
+@media (max-width:700px){
+  .header-inner{flex-direction:column; align-items:flex-start}
+}
