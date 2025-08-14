@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة الإدارة</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>لوحة الإدارة - إضافة مباراة جديدة</h1>
+
+  <!-- نموذج إضافة مباراة -->
+  <form id="matchForm">
+    <label for="id">معرف المباراة (id):</label>
+    <input type="text" id="id" name="id" required><br><br>
+
+    <label for="date">تاريخ المباراة:</label>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <label for="time">وقت المباراة:</label>
+    <input type="time" id="time" name="time" required><br><br>
+
+    <label for="teamA">الفريق الأول:</label>
+    <input type="text" id="teamA" name="teamA" required><br><br>
+
+    <label for="teamB">الفريق الثاني:</label>
+    <input type="text" id="teamB" name="teamB" required><br><br>
+
+    <label for="scoreA">نتيجة الفريق الأول:</label>
+    <input type="number" id="scoreA" name="scoreA" required><br><br>
+
+    <label for="scoreB">نتيجة الفريق الثاني:</label>
+    <input type="number" id="scoreB" name="scoreB" required><br><br>
+
+    <label for="mvp">أفضل لاعب (MVP):</label>
+    <input type="text" id="mvp" name="mvp"><br><br>
+
+    <button type="submit">إضافة المباراة</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>
